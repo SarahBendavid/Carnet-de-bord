@@ -1,0 +1,122 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+header {
+  height: 120px;          /* hauteur exacte */
+  flex: 0 0 auto;         /* désactive le redimensionnement du flex parent */
+  background-color: rgb(102, 25, 25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+header h1 {
+  margin: 0;
+  color: rgb(221, 177, 111);;
+}
+
+ /* MAIN */
+
+  main {
+  display: block;   /* plus de flex inutile */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(221, 177, 111);
+}
+
+.general{
+  width: 100%;
+  margin: 0;
+  justify-items: center;
+}
+
+.zone-saisie {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centre horizontalement */
+  gap: 10px;               /* espace entre input et bouton */
+  margin: 20px 0;
+}
+
+.bloc-note {
+  width: 49%;           
+  min-height: 725px;
+  background-color: rgb(221, 177, 111);
+  background-image: url("bloc-note.svg");
+  background-size: 100% 100%;  
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 40px 30px;     /* padding interne */
+  box-sizing: border-box;
+}
+
+.contenu-note {
+  width: 100%;
+  max-width: 100%;           /* contenu centré */
+  margin: 0 auto;
+}
+
+/* Centre le titre et la liste à l’intérieur du bloc */
+.bloc-note h2 {
+  margin: 0 0 20px 0;          /* espace entre titre et liste */
+  text-align: center;
+  font-family: "Georgia", serif;
+  margin-top: 131px;
+}
+
+/* Liste centrée sous le titre */
+#listeTache {
+  list-style: none;             /* pas de puces */
+  padding: 0;
+  margin-left: 120px;
+  width: 100%;
+  position: relative;
+}
+
+/* Chaque tâche reste à l’intérieur du bloc, avec un peu de marge */
+#listeTache li {
+  position: relative;
+  padding-left: 20px;
+  box-sizing: border-box;   /* padding inclus dans la largeur */
+  padding-top: 14px;
+  line-height: 1;
+}
+
+#listeTache li .texte-tache {
+  display: inline-block;
+}
+
+#listeTache li button {
+  position: absolute;
+  right: 227px;        /* bouton collé à droite du bloc-note */
+  top: 70%;
+  transform: translateY(-50%);
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#listeTache button:hover {
+  background-color: darkred;
+}
+
+.btn-effacer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+} 

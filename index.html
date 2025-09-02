@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta
+      charset="utf-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      description="xxx"
+    />
+    <title>Titre</title>
+    <link rel="stylesheet" href="../Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
+    <script src="./Scripts/config.js" defer></script>
+    <script src="./Scripts/main.js" defer></script>
+    <script src="./Scripts/script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Carnet de bord</h1>
+    </header>
+
+    <main>
+      <div class="general">
+        <div class="zone-saisie">
+          <input type="text" placeholder="Entrez votre tache" />
+          <button id="btnValider">Valider</button>
+        </div>
+        <div class="bloc-note">
+          <div class="contenu-note">
+            <h2>Liste de vos tâches :</h2>
+            <ul id="listeTache"></ul>
+          </div>
+        </div>
+
+        <div class="btn-effacer">
+          <button id="btnEffacer">Tout effacer</button>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
